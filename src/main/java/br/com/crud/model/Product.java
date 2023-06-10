@@ -1,5 +1,6 @@
-package br.com.crud.domain.product;
+package br.com.crud.model;
 
+import br.com.crud.dto.ProductDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,7 +19,7 @@ public class Product {
     private String name;
     private Integer price_in_cents;
 
-    public Product(RequestProduct product) {
+    public Product(ProductDto product) {
         this.name = product.name();
         this.price_in_cents = product.price_in_cents();
     }
