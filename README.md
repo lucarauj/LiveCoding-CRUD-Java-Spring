@@ -1,4 +1,11 @@
-# LIVE: CRUD Java Spring
+[![NPM](https://img.shields.io/npm/l/react)]()
+
+<h1 align="center">Live Coding:</h1>
+<h2 align="center">CRUD Java Spring</h2>
+
+<p align="center"><img width="300px" src="https://github.com/lucarauj/assets/blob/main/Spring.png" /></p>
+
+<br>  
 
 ## Dependências:
 
@@ -23,5 +30,19 @@
 - @Service: Marca uma classe como um serviço do Spring, geralmente contendo a lógica de negócios do aplicativo.
 
 <br>
+
+
+
+
+
+
+
+<br>
+
+## 👨‍🎓 Aluno
+
+#### Lucas Araujo
+
+<a href="https://www.linkedin.com/in/lucarauj"><img alt="lucarauj | LinkdeIN" width="40px" src="https://user-images.githubusercontent.com/43545812/144035037-0f415fc7-9f96-4517-a370-ccc6e78a714b.png" /></a>
 
 
