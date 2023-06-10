@@ -34,4 +34,10 @@ public class ProductController {
         product.setPrice_in_cents(data.price_in_cents());
         return ResponseEntity.ok(productRepository.save(product));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteProduct(@PathVariable String id) {
+        productRepository.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }
