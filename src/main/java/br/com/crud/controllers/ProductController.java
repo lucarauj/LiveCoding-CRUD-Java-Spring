@@ -48,6 +48,6 @@ public class ProductController {
     @Transactional
     public ResponseEntity deleteProduct(@PathVariable String id) {
         productRepository.deleteById(id);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 }
