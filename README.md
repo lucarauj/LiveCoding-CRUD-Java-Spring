@@ -1,6 +1,6 @@
-[![NPM](https://img.shields.io/npm/l/react)]()
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/lucarauj/LiveCoding-CRUD-Java-Spring/blob/main/LICENSE)
 
-<h1 align="center">Live Coding:</h1>
+<h1 align="center">Live Coding API Rest:</h1>
 <h2 align="center">CRUD Java Spring</h2>
 
 <p align="center"><img width="300px" src="https://github.com/lucarauj/assets/blob/main/Spring.png" /></p>
@@ -13,29 +13,46 @@
 - Spring Data JPA
 - PostgreSQL Driver
 - Flyway Migration
+- Validation
+- Lombok
+
+<br>
+
+## Implementei:
+
+- Criação do pacote repositories;
+- Criação do pacote services com criação da classe ProductService, tratando a criação, atualizações e exclusões nesta classe;
+- Finalização do tratamento de exceções;
 
 <br>
 
 ## Anotações:
 
-- @Autowired: Utilizada para injetar dependências automaticamente em uma classe, permitindo que você obtenha uma instância de uma classe necessária sem criar manualmente.
-- @Component: Usada para marcar uma classe como um componente gerenciado pelo Spring.
+- @AllArgsConstructor:
+- @Autowired: Utilizada para injetar dependências automaticamente em uma classe, permitindo que você obtenha uma instância de uma classe necessária sem criar manualmente;
+- @DeleteMapping:
+- @Entity:
+- @EqualsAndHashCode:
+- @ExceptionHandler:
 - @GetMapping:
+- @GeneratedValue(strategy = GenerationType.UUID):
+- @Getter:
+- @Id:
+- @NoArgsConstructor:
+- @NotBlank:
+- @NotNull:
 - @PostMapping:
-- @PathVariable: Usada para injetar uma variável fornecida no path de uma requisição nos parâmetros do método do controller que foi chamado para tratar essa requisição.
-- @RestController: Usada para marcar uma classe como um controller no padrão MVC (Model-View-Controller) do Spring.
-- @RequestMapping: Especifica a URL que um método do controlador irá manipular. 
-- @RestControllerAdvice:  É usado para definir um componente global que trata exceções lançadas por controladores REST.
-- @RequestBody: Usada para injetar o body de uma requisição nos parâmetros do método do controller que foi chamado para tratar essa requisição
-- @Service: Marca uma classe como um serviço do Spring, geralmente contendo a lógica de negócios do aplicativo.
-
-<br>
-
-
-
-
-
-
+- @PutMapping:
+- @PathVariable: Usada para injetar uma variável fornecida no path de uma requisição nos parâmetros do método do controller que foi chamado para tratar essa requisição;
+- @RestController: Usada para marcar uma classe como um controller no padrão MVC (Model-View-Controller) do Spring;
+- @RequestMapping: Especifica a URL que um método do controlador irá manipular;
+- @RestControllerAdvice:  É usado para definir um componente global que trata exceções lançadas por controladores REST;
+- @RequestBody: Usada para injetar o body de uma requisição nos parâmetros do método do controller que foi chamado para tratar essa requisição;
+- @Setter:
+- @Service:
+- @Table:
+- @Transactional:
+- @Valid:
 
 <br>
 
