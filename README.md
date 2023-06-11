@@ -3,7 +3,7 @@
 <h1 align="center">Live Coding API Rest:</h1>
 <h2 align="center">CRUD Java Spring</h2>
 
-<p align="center"><img width="300px" src="https://github.com/lucarauj/assets/blob/main/Spring.png" /></p>
+<p align="center"><img width="500px" src="https://github.com/lucarauj/assets/blob/main/Spring.png" /></p>
 
 <br>  
 
