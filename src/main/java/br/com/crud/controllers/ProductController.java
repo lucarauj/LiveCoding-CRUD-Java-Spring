@@ -1,8 +1,9 @@
 package br.com.crud.controllers;
 
-import br.com.crud.model.Product;
+import br.com.crud.models.Product;
 import br.com.crud.dto.ProductDto;
 import br.com.crud.repositories.ProductRepository;
+import br.com.crud.services.ProductService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private ProductService productService;
+
     @GetMapping
     public ResponseEntity getAllProducts() {
         var allProducts = productRepository.findAllByActiveTrue();
@@ -27,8 +31,8 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity registerProduct(@RequestBody @Valid ProductDto data) {
-        Product product = new Product(data);
-        return ResponseEntity.ok(productRepository.save(product));
+        var newProduct = productService.saveProduct(data);
+        return ResponseEntity.ok(newProduct);
     }
 
     @PutMapping("/{id}")
@@ -36,10 +40,8 @@ public class ProductController {
     public ResponseEntity updateProduct(@RequestBody @Valid ProductDto data, @PathVariable String id) {
         Optional<Product> optionalProduct = productRepository.findById(id);
         if(optionalProduct.isPresent()) {
-            Product product = optionalProduct.get();
-            product.setName(data.name());
-            product.setPrice_in_cents(data.price_in_cents());
-            return ResponseEntity.ok(product);
+            var productUpdate = productService.updateProduct(data, id);
+            return ResponseEntity.ok(productUpdate);
         } else {
             throw new EntityNotFoundException();
         }
@@ -50,8 +52,7 @@ public class ProductController {
     public ResponseEntity deleteProduct(@PathVariable String id) {
         Optional<Product> optionalProduct = productRepository.findById(id);
         if(optionalProduct.isPresent()) {
-            Product product = optionalProduct.get();
-            product.setActive(false);
+            productService.deleteProduct(id);
             return ResponseEntity.noContent().build();
         } else {
             throw new EntityNotFoundException();

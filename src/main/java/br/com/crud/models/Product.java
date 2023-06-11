@@ -1,4 +1,4 @@
-package br.com.crud.model;
+package br.com.crud.models;
 
 import br.com.crud.dto.ProductDto;
 import jakarta.persistence.*;
